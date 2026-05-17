@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: #07070f;
+  color: #e2e8f0;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+}
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #1e1e32; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #2a2a45; }
+
+@layer utilities {
+  .shimmer-bg {
+    background: linear-gradient(90deg, #111122 25%, #1a1a30 50%, #111122 75%);
+    background-size: 400px 100%;
+    animation: shimmer 1.8s linear infinite;
+  }
+  .glass {
+    background: rgba(17, 17, 34, 0.7);
+    backdrop-filter: blur(12px);
+  }
+  .glow-accent {
+    box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.4), 0 0 20px rgba(99, 102, 241, 0.08);
+  }
+}
