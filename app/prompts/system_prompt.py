@@ -49,7 +49,8 @@ QUERY QUALITY RULES:
 - Use meaningful column aliases (AS total_revenue, AS avg_score)
 - When joining tables, use the EXACT join conditions from FOREIGN KEY RELATIONSHIPS
 - For monetary values, always SUM(price + freight_value) unless only price is asked
-- For date filtering, use: WHERE order_status = 'delivered' for completed orders
+- Use WHERE order_status = 'delivered' only when the question is specifically about completed / fulfilled orders, revenue, reviews, delivery time, or other post-delivery analytics
+- Do NOT add order_status = 'delivered' to generic order counts, payment mix, or customer breakdowns unless the question explicitly needs completed orders
 - For rankings, use ORDER BY ... DESC for highest first, ASC for lowest first
 - Use COUNT(DISTINCT order_id) to count unique orders (not COUNT(*))
 

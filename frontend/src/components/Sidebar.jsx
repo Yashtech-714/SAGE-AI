@@ -35,8 +35,8 @@ export default function Sidebar({ activeTab, onTabChange, history, onSelect, onC
         <div className="flex items-center gap-2.5">
           <div className="w-7 h-7 rounded-lg bg-accent/20 flex items-center justify-center text-sm">⚡</div>
           <div>
-            <div className="text-sm font-semibold text-slate-100">NL2SQL</div>
-            <div className="text-xs text-slate-600">Analytics Engine</div>
+            <div className="text-sm font-semibold text-slate-100">SAGE AI</div>
+            <div className="text-xs text-slate-600">SQL Analytics Generation Engine</div>
           </div>
         </div>
       </div>
